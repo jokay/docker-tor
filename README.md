@@ -2,6 +2,8 @@
 
 Docker image for [Tor](https://www.torproject.org/).
 
+Currently only used as Tor network proxy daemon allowing connections to port `9050`.
+
 ## Information
 
 | Service | Stats                                                                                     |
@@ -11,10 +13,10 @@ Docker image for [Tor](https://www.torproject.org/).
 
 ## General
 
-| Topic     | Description                                            |
-|-----------|--------------------------------------------------------|
-| Image     | See [Docker Hub](https://hub.docker.com/r/xjokay/tor). |
-| Source    | See [GitHub](https://github.com/x-jokay/docker-tor).   |
+| Topic  | Description                                            |
+|--------|--------------------------------------------------------|
+| Image  | See [Docker Hub](https://hub.docker.com/r/xjokay/tor). |
+| Source | See [GitHub](https://github.com/x-jokay/docker-tor).   |
 
 ## Installation
 
@@ -24,22 +26,15 @@ docker pull xjokay/tor
 
 ### Supported tags
 
-| Tag    | Description          | Size                                                                                                                                              |
-|--------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| latest | Latest master build  | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/tor/latest.svg?style=flat-square)](https://hub.docker.com/r/xjokay/tor/tags) |
+| Tag    | Description         | Size                                                                                                                                              |
+|--------|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| latest | Latest master build | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/tor/latest.svg?style=flat-square)](https://hub.docker.com/r/xjokay/tor/tags) |
 
 ### Exposed Ports
 
-| Port | Protocol | Description             |
-|------|----------|-------------------------|
-| 9050 | TCP      | Default connection port |
-
-### Volumes
-
-| Directory    | Description                 |
-|--------------|-----------------------------|
-| /etc/tor     | Location of the config file |
-| /var/lib/tor | Location of the data files  |
+| Port | Protocol | Description           |
+|------|----------|-----------------------|
+| 9050 | TCP      | SOCKS5 (without auth) |
 
 ## Samples
 
@@ -51,9 +46,6 @@ version: '3.7'
 services:
   app:
     image: xjokay/tor:latest
-    volumes:
-      - ./config:/etc/tor
-      - ./data:/var/lib/tor
     ports:
       - 9050:9050
     networks:
@@ -65,8 +57,6 @@ services:
 
 ```sh
 docker run -d \
-  -v $PWD/config:/etc/tor \
-  -v $PWD/data:/var/lib/tor \
   -p 9050:9050 \
   xjokay/tor:latest
 ```
