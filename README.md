@@ -1,22 +1,15 @@
 # Docker Tor
 
-Docker image for [Tor](https://www.torproject.org/).
+Docker image for [Tor](https://www.torproject.org).
 
 Currently only used as Tor network proxy daemon allowing connections to port `9050`.
 
 ## Information
 
-| Service | Stats                                                                                     |
-|---------|-------------------------------------------------------------------------------------------|
-| Docker  | [![Pulls](https://img.shields.io/docker/pulls/xjokay/tor.svg?style=flat-square)](https://hub.docker.com/r/xjokay/tor) [![Stars](https://img.shields.io/docker/stars/xjokay/tor.svg?style=flat-square)](https://hub.docker.com/r/xjokay/tor) |
-| GitHub  | [![Last commit](https://img.shields.io/github/last-commit/x-jokay/docker-tor.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/commits/master) [![Issues](https://img.shields.io/github/issues-raw/x-jokay/docker-tor.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/issues) [![PR](https://img.shields.io/github/issues-pr-raw/x-jokay/docker-tor.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/pulls) [![Size](https://img.shields.io/github/repo-size/x-jokay/docker-tor.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/) [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/blob/master/LICENSE) |
-
-## General
-
-| Topic  | Description                                            |
-|--------|--------------------------------------------------------|
-| Image  | See [Docker Hub](https://hub.docker.com/r/xjokay/tor). |
-| Source | See [GitHub](https://github.com/x-jokay/docker-tor).   |
+| Service                                           | Stats |
+|---------------------------------------------------|-------|
+| [Docker Hub](https://hub.docker.com/r/xjokay/tor) | [![Pulls](https://img.shields.io/docker/pulls/xjokay/tor.svg?style=flat-square)](https://hub.docker.com/r/xjokay/tor) [![Stars](https://img.shields.io/docker/stars/xjokay/tor.svg?style=flat-square)](https://hub.docker.com/r/xjokay/tor) |
+| [GitHub](https://github.com/x-jokay/docker-tor)   | [![Last commit](https://img.shields.io/github/last-commit/x-jokay/docker-tor.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/commits/master) [![Issues](https://img.shields.io/github/issues-raw/x-jokay/docker-tor.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/issues) [![PR](https://img.shields.io/github/issues-pr-raw/x-jokay/docker-tor.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/pulls) [![Size](https://img.shields.io/github/repo-size/x-jokay/docker-tor.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/) [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/x-jokay/docker-tor/blob/master/LICENSE) |
 
 ## Installation
 
