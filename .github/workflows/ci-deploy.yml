@@ -4,6 +4,8 @@ env:
   MAINTAINER: "x-jokay"
   REPOSITORY: "https://github.com/x-jokay/docker-tor"
   VERSION: "latest"
+  COMMIT: ${GITHUB_SHA::8}
+  DATE: ${date -u +'%Y-%m-%dT%H:%M:%SZ'}
 
 on:
   workflow_dispatch:
@@ -37,7 +39,7 @@ jobs:
             MAINTAINER=${{ env.MAINTAINER }}
             REPOSITORY=${{ env.REPOSITORY }}
             VERSION=${{ env.VERSION }}
-            COMMIT=${{ env.GITHUB_SHA::8 }}
-            DATE=${{ date -u +'%Y-%m-%dT%H:%M:%SZ' }}
+            COMMIT=${{ env.COMMIT }}
+            DATE=${{ env.DATE }}
           tags: |
             xjokay/tor:${{ env.VERSION }}
