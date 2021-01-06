@@ -2,6 +2,7 @@ name: ci
 
 env:
   DOCKERHUB_REPO: "xjokay/tor"
+  PLATFORMS: "linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x"
   VERSION: "latest"
 
 on:
@@ -33,7 +34,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          platforms: ${{ env.PLATFORMS }}
           push: true
           build-args: |
             MAINTAINER=${{ github.repository_owner }}
