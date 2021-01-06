@@ -1,8 +1,8 @@
 name: ci
 
 env:
-  MAINTAINER: "x-jokay"
-  REPOSITORY: "https://github.com/x-jokay/docker-tor"
+  MAINTAINER: ${{ github.repository_owner }}
+  REPOSITORY: "https://github.com/${{ github.repository }}"
   VERSION: "latest"
   COMMIT: ${{ github.sha }}
   DATE: $(date -u +'%Y-%m-%dT%H:%M:%SZ')
