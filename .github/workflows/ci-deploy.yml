@@ -4,7 +4,7 @@ env:
   MAINTAINER: "x-jokay"
   REPOSITORY: "https://github.com/x-jokay/docker-tor"
   VERSION: "latest"
-  COMMIT: ${{ github.sha::8 }}
+  COMMIT: ${{ github.sha }}
   DATE: ${ date -u +'%Y-%m-%dT%H:%M:%SZ' }
 
 on:
