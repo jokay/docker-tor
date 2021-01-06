@@ -5,6 +5,7 @@ env:
   REPOSITORY: "https://github.com/x-jokay/docker-tor"
   VERSION: "latest"
   COMMIT: ${{ github.sha::8 }}
+  DATE: ${{ date -u +'%Y-%m-%dT%H:%M:%SZ' }}
 
 on:
   workflow_dispatch:
@@ -39,6 +40,6 @@ jobs:
             REPOSITORY=${{ env.REPOSITORY }}
             VERSION=${{ env.VERSION }}
             COMMIT=${{ env.COMMIT }}
-            DATE=${{ date -u +'%Y-%m-%dT%H:%M:%SZ' }}
+            DATE=${{ env.DATE }}
           tags: |
             xjokay/tor:${{ env.VERSION }}
