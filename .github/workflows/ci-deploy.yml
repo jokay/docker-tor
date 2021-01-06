@@ -16,7 +16,6 @@ jobs:
     steps:
       - name: Set variables
         run: |
-          echo "COMMIT=${{ github.sha::8 }}" >> $GITHUB_ENV
           echo "DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v2
@@ -40,7 +39,7 @@ jobs:
             MAINTAINER=${{ github.repository_owner }}
             REPOSITORY="https://github.com/${{ github.repository }}"
             VERSION=${{ env.VERSION }}
-            COMMIT=${{ env.COMMIT }}
+            COMMIT=${{ github.sha }}
             DATE=${{ env.DATE }}
           tags: |
             ${{ env.DOCKERHUB_REPO }}:${{ env.VERSION }}
