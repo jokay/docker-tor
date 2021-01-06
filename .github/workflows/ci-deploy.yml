@@ -1,12 +1,11 @@
 name: ci
 
 env:
+  DOCKERHUB_REPO: "xjokay/tor"
+  VERSION: "latest"
   MAINTAINER: ${{ github.repository_owner }}
   REPOSITORY: "https://github.com/${{ github.repository }}"
-  VERSION: "latest"
   COMMIT: ${{ github.sha }}
-  DATE: $(date -u +'%Y-%m-%dT%H:%M:%SZ')
-  DOCKERHUB_REPO: "xjokay/tor"
 
 on:
   workflow_dispatch:
@@ -41,6 +40,6 @@ jobs:
             REPOSITORY=${{ env.REPOSITORY }}
             VERSION=${{ env.VERSION }}
             COMMIT=${{ env.COMMIT }}
-            DATE=${{ env.DATE }}
+            DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           tags: |
             ${{ env.DOCKERHUB_REPO }}:${{ env.VERSION }}
