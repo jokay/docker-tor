@@ -1,10 +1,15 @@
 name: ci
 
+env:
+  MAINTAINER: "x-jokay"
+  REPOSITORY: "https://github.com/x-jokay/docker-tor"
+  VERSION: "latest"
+
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   deploy:
@@ -28,5 +33,11 @@ jobs:
           file: ./Dockerfile
           platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           push: true
+          build-args: |
+            MAINTAINER=${{ env.MAINTAINER }}
+            REPOSITORY=${{ env.REPOSITORY }}
+            VERSION=${{ env.VERSION }}
+            COMMIT=${GITHUB_SHA::8}
+            DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           tags: |
-            xjokay/tor:latest
+            xjokay/tor:${{ env.VERSION }}
