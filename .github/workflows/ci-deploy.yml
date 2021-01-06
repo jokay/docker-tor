@@ -3,9 +3,6 @@ name: ci
 env:
   DOCKERHUB_REPO: "xjokay/tor"
   VERSION: "latest"
-  MAINTAINER: ${{ github.repository_owner }}
-  REPOSITORY: "https://github.com/${{ github.repository }}"
-  COMMIT: ${{ github.sha }}
 
 on:
   workflow_dispatch:
@@ -17,6 +14,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Set variables
+        run: |
+          echo "COMMIT=${{ github.sha::8 }}" >> $GITHUB_ENV
+          echo "DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set up QEMU
@@ -36,10 +37,10 @@ jobs:
           platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           push: true
           build-args: |
-            MAINTAINER=${{ env.MAINTAINER }}
-            REPOSITORY=${{ env.REPOSITORY }}
+            MAINTAINER=${{ github.repository_owner }}
+            REPOSITORY="https://github.com/${{ github.repository }}"
             VERSION=${{ env.VERSION }}
             COMMIT=${{ env.COMMIT }}
-            DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+            DATE=${{ env.DATE }}
           tags: |
             ${{ env.DOCKERHUB_REPO }}:${{ env.VERSION }}
