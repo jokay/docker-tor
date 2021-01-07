@@ -1,9 +1,8 @@
-name: ci
+name: release
 
 env:
   DOCKERHUB_REPO: "xjokay/tor"
   PLATFORMS: "linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x"
-  VERSION: "latest"
 
 on:
   workflow_dispatch:
@@ -12,12 +11,13 @@ on:
       - main
 
 jobs:
-  deploy:
+  dockerhub:
     runs-on: ubuntu-latest
     steps:
       - name: Set variables
         run: |
           echo "DATE=$(date -u +%Y-%m-%dT%H:%M:%S%z)" >> $GITHUB_ENV
+          echo "VERSION=latest" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set up QEMU
