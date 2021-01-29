@@ -19,9 +19,10 @@ docker pull docker.io/xjokay/tor:latest
 
 ### Supported tags
 
-| Tag    | Description         | Size                                                                                                  |
-|--------|---------------------|-------------------------------------------------------------------------------------------------------|
-| latest | Latest `main` build | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/tor/latest.svg?style=flat-square) |
+| Tag       | Description         | Size |
+|-----------|---------------------|------|
+| latest    | Latest `main` build | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/tor/latest.svg?style=flat-square) |
+| {release} | Specific release version, see available [releases](https://github.com/x-jokay/docker-tor/releases) | |
 
 ### Exposed Ports
 
