@@ -2,4 +2,4 @@
 
 ## [0.4.4.6](https://github.com/x-jokay/docker-tor/releases/tag/0.4.4.6) (2021-01-29)
 
-This release **0.4.4.6** uses Tor version **0.4.4.6**.
+This release contains Tor [0.4.4.6](https://gitweb.torproject.org/tor.git/tree/ChangeLog?h=tor-0.4.4.6).
