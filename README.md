@@ -34,7 +34,7 @@ docker pull docker.io/xjokay/tor:latest
 
 ### docker-compose
 
-```yaml
+```yml
 services:
   app:
     image: docker.io/xjokay/tor:latest
