@@ -6,9 +6,9 @@ Currently only used as Tor network proxy daemon allowing connections to port `90
 
 ## Information
 
-| Service                                           | Stats |
-|---------------------------------------------------|-------|
-| [GitHub](https://github.com/x-jokay/docker-tor)   | ![Last commit](https://img.shields.io/github/last-commit/x-jokay/docker-tor.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-raw/x-jokay/docker-tor.svg?style=flat-square) ![PR](https://img.shields.io/github/issues-pr-raw/x-jokay/docker-tor.svg?style=flat-square) |
+| Service | Stats |
+|---------|-------|
+| [GitHub](https://github.com/jokay/docker-tor) | ![Last commit](https://img.shields.io/github/last-commit/jokay/docker-tor.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-raw/jokay/docker-tor.svg?style=flat-square) ![PR](https://img.shields.io/github/issues-pr-raw/jokay/docker-tor.svg?style=flat-square) |
 | [Docker Hub](https://hub.docker.com/r/xjokay/tor) | ![Pulls](https://img.shields.io/docker/pulls/xjokay/tor.svg?style=flat-square) ![Stars](https://img.shields.io/docker/stars/xjokay/tor.svg?style=flat-square) |
 
 ## Usage
@@ -22,7 +22,7 @@ docker pull docker.io/xjokay/tor:latest
 | Tag       | Description         | Size |
 |-----------|---------------------|------|
 | latest    | Latest `main` build | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/tor/latest.svg?style=flat-square) |
-| {release} | Specific release version, see available [releases](https://github.com/x-jokay/docker-tor/releases) | |
+| {release} | Specific release version, see available [releases](https://github.com/jokay/docker-tor/releases) | |
 
 ### Exposed Ports
 
