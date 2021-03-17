@@ -1,8 +1,8 @@
 # Docker Tor
 
-Docker image for [Tor](https://www.torproject.org).
+Docker image for [Tor](https://www.torproject.org) based on [Alpine Linux](https://www.alpinelinux.org).
 
-Currently only used as Tor network proxy daemon allowing connections to port `9050`.
+Provides a Tor network proxy daemon allowing SOCKS5 connections to port `9050`.
 
 ## Information
 
