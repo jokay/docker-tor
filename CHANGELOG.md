@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.6.6](https://github.com/jokay/docker-tor/releases/tag/0.4.6.6) (2021-07-13)
+
+This release contains Tor [0.4.6.6](https://gitweb.torproject.org/tor.git/tree/ChangeLog?h=tor-0.4.6.6).
+
 ## [0.4.6.5](https://github.com/jokay/docker-tor/releases/tag/0.4.6.5) (2021-07-01)
 
 This release contains Tor [0.4.6.5](https://gitweb.torproject.org/tor.git/tree/ChangeLog?h=tor-0.4.6.5).
